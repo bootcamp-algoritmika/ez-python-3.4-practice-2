@@ -1,0 +1,68 @@
+GET http://127.0.0.1:1234/issues/
+Accept: application/json
+
+###
+
+GET http://127.0.0.1:1234/issues/1
+Accept: application/json
+
+###
+
+GET http://127.0.0.1:1234/issues/6
+Accept: application/json
+
+###
+
+POST http://127.0.0.1:1234/issues/
+Accept: application/json
+Content-Type: application/json
+
+{
+  "status": 1,
+  "title": "aaaaaa",
+  "text": "this iaaaaaaaaaaaas textA",
+  "assignee": "soaaaaaaaaaaaameoneA",
+  "tags": [
+    "aaaaaaaaaaaaa1",
+    "b1",
+    "c1"
+  ],
+  "author": "aaaaaame"
+}
+
+###
+
+PUT http://127.0.0.1:1234/issues/6
+Accept: application/json
+Content-Type: application/json
+
+{
+  "id": 6,
+  "status": 1,
+  "title": "bbbbbbb",
+  "text": "this bbbbbbb textA",
+  "assignee": "bbbbbbb",
+  "tags": [
+    "bbbbbbb",
+    "b1",
+    "c1"
+  ],
+  "author": "aaaaaame",
+  "created_date": "1636025028",
+  "modified_date": null
+}
+
+
+###
+
+PATCH http://127.0.0.1:1234/issues/6
+Accept: application/json
+Content-Type: application/json
+
+{
+  "author": "Misha Loki"
+}
+
+###
+
+DELETE http://127.0.0.1:1234/issues/6
